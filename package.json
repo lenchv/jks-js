@@ -1,0 +1,24 @@
+{
+  "name": "jks-js",
+  "version": "0.0.1",
+  "description": "jks-js is a converter of Java Key Store (JKS) certificates to PEM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jks",
+    "java",
+    "keystore",
+    "keystore",
+    "nodejs",
+    "js",
+    "javascript"
+  ],
+  "author": "Volodymyr Liench <lenchvov@gmail.com> (https://github.com/lenchv)",
+  "license": "MIT",
+  "dependencies": {
+    "x509": "git+https://github.com/ghaiklor/node-x509.git",
+    "x509.js": "^1.0.0"
+  }
+}
