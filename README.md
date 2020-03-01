@@ -1,5 +1,9 @@
 # JKS-JS
 
+[![npm](https://img.shields.io/npm/v/jks-js?color=blue&style=flat-square)](https://www.npmjs.com/package/jks-js)
+[![test](https://github.com/lenchv/jks-js/workflows/test/badge.svg?branch=master&event=push)](https://github.com/lenchv/jks-js/actions?query=workflow%3Atest+branch%3Amaster)
+[![codecov](https://codecov.io/gh/lenchv/jks-js/branch/master/graph/badge.svg)](https://codecov.io/gh/lenchv/jks-js)
+
 ## Description
 
 **jks-js** is a converter of [Java Keystore](https://en.wikipedia.org/wiki/Java_KeyStore) to PEM certificates in order to securely connect to Java based servers using node js.
