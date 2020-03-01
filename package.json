@@ -1,7 +1,7 @@
 {
   "name": "jks-js",
-  "version": "0.0.1",
-  "description": "jks-js is a converter of Java Key Store (JKS) certificates to PEM",
+  "version": "0.1.0",
+  "description": "jks-js is a converter of Java Key Store (JKS) to PEM certificates in order to securely connect to Java based servers using node js.",
   "main": "lib/index.js",
   "bin": "bin/index.js",
   "scripts": {
@@ -26,5 +26,13 @@
     "codecov": "^3.6.5",
     "mocha": "^7.1.0",
     "nyc": "^15.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/lenchv/jks-js/issues"
+  },
+  "homepage": "https://github.com/lenchv/jks-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenchv/jks-js/"
   }
 }
