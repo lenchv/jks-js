@@ -25,6 +25,17 @@ const { cert, key } = keystore['alias'];
 
 ```
 
+after extraction you may use cert and key in your connection settings:
+
+```javascript
+tls.connect('<port>', '<host>', {
+	key: key,
+	cert: cert,
+});
+```
+
+[more details](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback)
+
 ## API
 
 ```javascript
