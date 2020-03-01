@@ -20,7 +20,6 @@
   "author": "Volodymyr Liench <lenchvov@gmail.com> (https://github.com/lenchv)",
   "license": "MIT",
   "dependencies": {
-    "args": "^5.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

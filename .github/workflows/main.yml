@@ -1,0 +1,30 @@
+name: test
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+    - develop
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run unit tests
+        run: |
+          npm run test
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coverage
+        run: |
+          npm run test
+          npm run coverage -- -t ${{secrets.CODECOV_TOKEN}}
+          bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
