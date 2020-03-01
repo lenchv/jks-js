@@ -58,7 +58,7 @@ const {
 	toPem,
 
 	/**
-	 *	Only extracts certificates
+	 *  Only extracts certificates
 	 *  @param keystore
 	 *  @param password
 	 *  @return { <alias name>: KeyEntry | TrustedKeyEntry }
@@ -80,15 +80,15 @@ const {
 
 The implementaion is based on [JavaKeystore.java](https://github.com/frohoff/jdk8u-jdk/blob/da0da73ab82ed714dc5be94acd2f0d00fbdfe2e9/src/share/classes/sun/security/provider/JavaKeyStore.java#L605) logic, which is internally used for creation of java keystore, including `keytool`.
 
-It is considered that keystore contains only `X.509` certificates.
+It is supposed the keystore contains `X.509` certificates.
 
-The decryption constrained by alghorithms that implemented in [crypto](https://nodejs.org/api/crypto.html#crypto_keyobject_asymmetrickeytype) module of Node.js.
+But you may use the library to extract any of certificates.
+
+The decryption constrained by alghorithms that implemented in the [crypto](https://nodejs.org/api/crypto.html#crypto_keyobject_asymmetrickeytype) module of Node.js.
 
 ## Issues
 
-If you find any issues feel free to create an issue.
-
-Also, it would be helpful if you provide the generated keystore file or instruction how you created it.
+If you find any troubles feel free to create an issue.
 
 ## License
 
