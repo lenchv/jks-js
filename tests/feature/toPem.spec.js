@@ -11,14 +11,14 @@ const readKey = (name) => {
 	const key = readFile(name + '.key');
 	const position = key.indexOf('-----BEGIN PRIVATE KEY-----');
 
-	return key.slice(position);
+	return key.slice(position).replace('\r\n', '\n');
 };
 
 const readCert = (name) => {
 	const key = readFile(name + '.pem');
 	const position = key.indexOf('-----BEGIN CERTIFICATE-----');
 
-	return key.slice(position);
+	return key.slice(position).replace('\r\n', '\n');
 };
 
 describe('Keystore', () => {
