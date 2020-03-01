@@ -19,12 +19,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run unit tests
         run: |
+          npm install
           npm run test
   coverage:
     runs-on: ubuntu-latest
     steps:
       - name: Coverage
         run: |
+          npm install
           npm run test
           npm run coverage -- -t ${{secrets.CODECOV_TOKEN}}
           bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
