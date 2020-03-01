@@ -21,7 +21,7 @@ const keystore = jks.toPem(
 	'password'
 );
 
-const { ca, key } = keystore['alias'];
+const { cert, key } = keystore['alias'];
 
 ```
 
@@ -37,10 +37,10 @@ const {
 	 * @param password password for verification and decryption
 	 * @return {
 	 *     <alias name>: {
-	 *         ca: string // compound certificates chain
+	 *         cert: string // compound certificates chain
 	 *         key: string // decrypted private key 
 	 *     } | {
-	 *         cert: string // trusted certificate
+	 *         ca: string // trusted certificate
 	 *     }
 	 * }
 	 */
