@@ -19,6 +19,8 @@
   "author": "Volodymyr Liench <lenchvov@gmail.com> (https://github.com/lenchv)",
   "license": "MIT",
   "dependencies": {
+    "node-int64": "^0.4.0",
+    "node-rsa": "^1.0.7"
   },
   "devDependencies": {
     "chai": "^4.2.0",
