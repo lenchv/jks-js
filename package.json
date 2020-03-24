@@ -1,6 +1,6 @@
 {
   "name": "jks-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "jks-js is a converter of Java Key Store (JKS) to PEM certificates in order to securely connect to Java based servers using node js.",
   "main": "lib/index.js",
   "scripts": {
