@@ -1,9 +1,10 @@
 #!/bin/bash
 
+ROOT_PATH=$1
 ALIASNAME=jks-js
 SSL_PASSWORD=password
-KEYSTORE_PATH=./feature/keystore
-CERT_PATH=./feature/pem
+KEYSTORE_PATH=$ROOT_PATH/keystore
+CERT_PATH=$ROOT_PATH/pem
 
 function generateKeystore() {
 	ALG=$1 # EC | RSA | DSA
@@ -42,7 +43,7 @@ function generateKeystore() {
 	rm $KEYSTORE_PATH/jks.p12
 }
 
-function generateTrusstore() {
+function generateTruststore() {
 	KEYSTORE=$KEYSTORE_PATH/$1_keystore.jks
 	TRUSTSTORE_FILE=$KEYSTORE_PATH/$1_truststore.jks
 	keytool -export -alias $ALIASNAME -file $CERT_PATH/$ALIASNAME.crt -keystore $KEYSTORE -storepass $SSL_PASSWORD -noprompt;
@@ -63,4 +64,4 @@ generateKeystore RSA 2048 MD5withRSA
 generateKeystore RSA 2048 SHA1withRSA
 generateKeystore RSA 2048 SHA256withRSA
 
-generateTrusstore RSA_2048
+generateTruststore RSA_2048
