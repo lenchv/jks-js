@@ -22,7 +22,8 @@ const readCert = (name, keyPath) => {
 };
 
 const runTests = (javaVersion, keyPath) => {
-	describe('Java ' + javaVersion, () => {
+	describe('Java ' + javaVersion, function() {
+		this.timeout(10000);
 		describe('Keystore', () => {
 			[
 				'RSA_2048_keystore',
