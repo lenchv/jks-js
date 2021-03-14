@@ -1,3 +1,7 @@
+## [1.0.0](https://github.com/lenchv/jks-js/releases/tag/v1.0.0) 2021-14-03
+
+- In java 11 implementation of JKS was changed to PKCS12. These changes add support of extracting certificates from pkcs12 using node-forge library.
+
 ## [0.1.3](https://github.com/lenchv/jks-js/releases/tag/v0.1.3) 2020-24-03
 
 - Add using `node-int64` in order to present long numbers from stream in nodejs version that do not support big numbers
