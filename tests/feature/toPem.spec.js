@@ -73,7 +73,6 @@ const runTests = (javaVersion, keyPath) => {
       ].forEach((name) => {
         it("should work", () => {
           const KEY_ALIAS = "jks-js";
-          let keystoreEntries;
           if (javaVersion === 8) {
             parseJks(
               fs.readFileSync(path.join(keyPath, "keystore", name + ".jks")),
