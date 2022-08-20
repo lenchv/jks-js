@@ -49,7 +49,8 @@ const {
 	 * and decrypts private key 
 	 * 
 	 * @param keystore content of java keystore or truststore file
-	 * @param password password for verification and decryption
+	 * @param keystorePassword password for verification and decryption
+	 * @param pemPassword (optional) password that is used for decryption, in case it is different from keystorePassword. If not specified, keystorePassword is used
 	 * @return {
 	 *     <alias name>: {
 	 *         cert: string // compound certificates chain
@@ -64,7 +65,8 @@ const {
 	/**
 	 *  Only extracts certificates
 	 *  @param keystore
-	 *  @param password
+	 *  @param keystorePassword
+	 *  @param pemPassword
 	 *  @return { <alias name>: KeyEntry | TrustedKeyEntry }
 	 */
 	parseJks,

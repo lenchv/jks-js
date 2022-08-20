@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/lenchv/jks-js/releases/tag/v1.1.0) 2022-08-20
+
+- Updated libraries
+
+- Added ability to set different password for decryption key than for keystore
+
 ## [1.0.1](https://github.com/lenchv/jks-js/releases/tag/v1.0.1) 2021-07-05
 
 - Fix parse pkcs12 method
