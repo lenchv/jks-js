@@ -44,7 +44,23 @@ const runTests = (javaVersion, keyPath) => {
 					expect(cert['jks-js'].cert).to.be.eq(readCert(name, keyPath));
 				});
 			});
+
+
+			if (javaVersion === 8) {
+				it('should extract certificates with different password', () => {
+					const cert = toPem(
+						fs.readFileSync(path.join(keyPath, 'keystore', 'diff_pass.jks')),
+						'password1',
+						'password2'
+					);
+		
+					expect(cert).has.key('jks-js');
+					expect(cert['jks-js'].key).to.be.eq(readKey('diff_pass', keyPath));
+					expect(cert['jks-js'].cert).to.be.eq(readCert('diff_pass', keyPath));
+				});
+			}
 		});
+
 
 		describe('Truststore', () => {
 			it('cert should be extracted', () => {
