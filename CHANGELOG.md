@@ -1,3 +1,7 @@
+## [1.1.1](https://github.com/lenchv/jks-js/releases/tag/v1.1.1) 2023-03-18
+
+- Fix dependency vulnerabilities
+
 ## [1.1.0](https://github.com/lenchv/jks-js/releases/tag/v1.1.0) 2022-08-20
 
 - Updated libraries
