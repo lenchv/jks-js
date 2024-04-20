@@ -1,3 +1,8 @@
+## [1.1.2](https://github.com/lenchv/jks-js/releases/tag/v1.1.2) 2024-04-20
+
+- Added index.d.ts with declared types for typescript
+- Added polyfill for deprecated Buffer.slice
+
 ## [1.1.1](https://github.com/lenchv/jks-js/releases/tag/v1.1.1) 2024-03-18
 
 - Fix dependency vulnerabilities
