@@ -35,6 +35,6 @@
   "homepage": "https://github.com/lenchv/jks-js#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lenchv/jks-js/"
+    "url": "git+https://github.com/lenchv/jks-js.git"
   }
 }
