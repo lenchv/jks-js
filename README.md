@@ -1,7 +1,7 @@
 # JKS-JS
 
 [![npm](https://img.shields.io/npm/v/jks-js?color=blue&style=flat-square)](https://www.npmjs.com/package/jks-js)
-[![test](https://github.com/lenchv/jks-js/workflows/test/badge.svg?branch=master&event=push)](https://github.com/lenchv/jks-js/actions?query=workflow%3Atest+branch%3Amaster)
+[![test](https://github.com/lenchv/jks-js/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/lenchv/jks-js/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/lenchv/jks-js/branch/master/graph/badge.svg)](https://codecov.io/gh/lenchv/jks-js)
 
 ## Description
@@ -63,11 +63,10 @@ const {
 	toPem,
 
 	/**
-	 *  Only extracts certificates
-	 *  @param keystore
-	 *  @param keystorePassword
-	 *  @param pemPassword
-	 *  @return { <alias name>: KeyEntry | TrustedKeyEntry }
+	 * The raw function to extract certificates
+	 * @param keystore
+	 * @param password
+	 * @return { <alias name>: KeyEntry | TrustedKeyEntry }
 	 */
 	parseJks,
 
@@ -78,7 +77,15 @@ const {
 	 * @param password password for PKCS8 decryption
 	 * @return decoded private key 
 	 */
-	decrypt
+	decrypt,
+
+	/**
+	 * The function that parses keystore/truststore in PKCS12 format
+	 * 
+	 * @param {Buffer} keystore
+	 * @param {String} password
+	 */
+	parsePkcs12,
 } = require('jks-js');
 ```
 
