@@ -42,7 +42,7 @@ export type KeyEntry = {
 *     }
 * }
 */
-const toPem: (keystore: Buffer, keystorePassword: string, privateKeyPassword?: string) => JksResult;
+export declare function toPem(keystore: Buffer, keystorePassword: string, privateKeyPassword?: string): JksResult;
 
 /**
  * The raw function to extract certificates
@@ -51,7 +51,7 @@ const toPem: (keystore: Buffer, keystorePassword: string, privateKeyPassword?: s
  *  @param {String} password
  *  @return {(KeyEntry | TrustedKeyEntry)[]}
  */
-const parseJks: (keystore: Buffer, password: string) => (KeyEntry | TrustedKeyEntry)[];
+export declare function parseJks(keystore: Buffer, password: string): (KeyEntry | TrustedKeyEntry)[];
 
 /**
  * Decrypts private key from DER to PEM
@@ -60,7 +60,7 @@ const parseJks: (keystore: Buffer, password: string) => (KeyEntry | TrustedKeyEn
  * @param {String} password password for PKCS8 decryption
  * @return {String} - decoded private key 
  */
-const decrypt: (protectedPrivateKey: Buffer, password: string = '') => string;
+export declare function decrypt(protectedPrivateKey: Buffer, password: string): string;
 
 /**
  * The function that parses keystore/truststore in PKCS12 format
@@ -68,15 +68,5 @@ const decrypt: (protectedPrivateKey: Buffer, password: string = '') => string;
  * @param {Buffer} keystore
  * @param {String} password
  */
-const parsePkcs12: (keystore: Buffer, password: string) => JksResult;
+export declare function parsePkcs12(keystore: Buffer, password: string): JksResult;
 
-export {
-	toPem,
-	parseJks,
-	decrypt,
-	parsePkcs12,
-  JksResult,
-  Certificate,
-  TrustedKeyEntry,
-  KeyEntry,
-};
