@@ -39,5 +39,12 @@ jobs:
       - run: |
           npm install
           npm run test
-          npm run coverage -- -t ${{secrets.CODECOV_TOKEN}}
-          bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          directory: ./
+          fail_ci_if_error: true
+          flags: unittests
+          name: codecov-umbrella
+          token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true
