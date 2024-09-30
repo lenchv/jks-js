@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/lenchv/jks-js/releases/tag/v1.1.4) 2024-09-30
+
+- Corrected types for typescripts #22
+- Fixed codecov and updated mocha 
+
+## [1.1.3](https://github.com/lenchv/jks-js/releases/tag/v1.1.3) 2024-04-20
+- Add npm provenance
+
 ## [1.1.2](https://github.com/lenchv/jks-js/releases/tag/v1.1.2) 2024-04-20
 
 - Added index.d.ts with declared types for typescript
