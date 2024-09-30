@@ -4,8 +4,7 @@
   "description": "jks-js is a converter of Java Key Store (JKS) to PEM certificates in order to securely connect to Java based servers using node js.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "nyc --reporter=lcov mocha 'tests/**/*.spec.js'",
-    "coverage": "codecov"
+    "test": "nyc --reporter=lcov mocha 'tests/**/*.spec.js'"
   },
   "keywords": [
     "jks",
@@ -25,8 +24,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.6",
-    "codecov": "^3.8.3",
-    "mocha": "^10.0.0",
+    "mocha": "^10.7.3",
     "nyc": "^15.1.0"
   },
   "bugs": {
