@@ -22,7 +22,7 @@ export type KeyEntry = {
   certType: 'X.509';
   alias: string;
   date: Date;
-  chain: Buffer[];
+  chain: Certificate[];
   protectedPrivateKey: Buffer;
 }
 
