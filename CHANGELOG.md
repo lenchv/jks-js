@@ -1,3 +1,7 @@
+## [1.1.7](https://github.com/lenchv/jks-js/releases/tag/v1.1.7) 2026-05-08
+
+- fix type of KeyEntry.chain
+
 ## [1.1.4](https://github.com/lenchv/jks-js/releases/tag/v1.1.4) 2024-09-30
 
 - Corrected types for typescripts #22
